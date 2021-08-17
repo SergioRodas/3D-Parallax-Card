@@ -1,0 +1,164 @@
+*{
+    margin: 0;    
+}
+
+.container{
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    font-family: monospace;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.top{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+
+
+.perspective{
+    width: 100%;
+    perspective: 1000px;
+}
+
+.card{
+    width: 270px;
+    height: 413px;
+    margin: auto;
+    box-shadow: 0 70px 63px -60px #494848;
+    transform-style: preserve-3d;
+    transition: transform 0.05s linear;   
+}
+
+.card .thumb{
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card .thumb:after{
+    background: inherit;
+    content: '';
+    display: block;
+    position: absolute;
+    left: -60px;
+    top: 40px;
+    width: 100%;
+    height: 108%;
+    z-index: -1;
+    filter: blur(55px);
+}
+
+.card h2 {
+    position: absolute;
+    top: 0;
+    left: -60px;
+    font-size: 40px;
+    font-weight: 100;
+    transform: translateZ(80px);
+}
+
+.card span {
+    position: absolute;
+    bottom: 40px;
+    right: -280px;
+    font-size: 37px;
+    font-weight: 400;
+    transform: translateZ(35px);
+}
+
+img{
+    margin: auto;
+    display: block;
+}
+
+@media screen and (max-width: 910px) and (min-width:721px) {
+.card{
+    width: 248px;
+    height: 380px;
+}
+
+.card span{
+    right: -190px;
+    font-size: 34px;
+}
+
+}
+
+@media only screen and (max-width: 720px) and (min-width: 571px) {    
+.card{
+    width: 222px;
+    height: 340px;
+}
+
+.card h2 {
+    font-size: 36px;
+    left: -45px;
+}
+
+.card span {
+    right: -140px;
+    font-size: 28px;
+}
+}
+
+@media only screen and (max-width: 570px) and (min-width: 481px) {    
+.card{
+    width: 196px;
+    height: 300px;
+}
+
+.card h2 {
+    font-size: 32px;
+    left: -32px;
+}
+
+.card span {
+    right: -100px;
+    font-size: 25px;
+}
+}
+
+@media only screen and (max-width: 480px) and (min-width: 381px) {    
+.card{
+    width: 183px;
+    height: 280px;
+}
+
+.card h2 {
+    font-size: 26px;
+    left: -10px;
+}
+
+.card span {
+    right: -60px;
+    font-size: 19px;
+}
+}
+
+@media only screen and (max-width: 380px) {
+    .card{
+        width: 157px;
+        height: 240px;
+    }
+    
+    .card h2 {
+        font-size: 23px;
+        left: -10px;
+    }
+    
+    .card span {
+        right: -40px;
+        font-size: 17px;
+    }
+}
